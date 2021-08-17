@@ -13,6 +13,14 @@ jobs:
       - checkout
       - run: node --version
       - run: 
+          name: "1st run"
+          command: |
+            echo 'export PATH=/max/home' >> $BASH_ENV
+            source $BASH_ENV
+            echo "$BASH_ENV"
+            echo "ENV is $PATH"
+      - run: echo "env is $PATH"
+      - run: 
           name: "Install depandance"
           command: npm  install
       - run:
