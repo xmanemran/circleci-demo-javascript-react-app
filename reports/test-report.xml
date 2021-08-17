@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/Users/emran/work/circleci-demo-javascript-react-app/src/__tests__/App.test.js">
+        <testCase name="renders without crashing" duration="65"/>
+    </file>
+</testExecutions>
