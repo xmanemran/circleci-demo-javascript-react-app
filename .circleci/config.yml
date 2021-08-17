@@ -14,11 +14,11 @@ jobs:
       - run: 
           name: "1st run"
           command: |
-            # echo 'export PATH=/max/home' >> $BASH_ENV
-            # source $BASH_ENV
+            echo 'export MAX=/max/home' >> $BASH_ENV
+            source $BASH_ENV
             echo "$BASH_ENV"
-            echo "ENV is $PATH"
-      - run: echo "env is $PATH"
+            echo "ENV is $MAX"
+      - run: echo "env is $MAX"
       - run: node --version
       - run: npm -v
       - run: 
