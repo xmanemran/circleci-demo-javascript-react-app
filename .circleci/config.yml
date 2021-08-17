@@ -12,3 +12,9 @@ jobs:
     steps:
       - checkout
       - run: node --version
+      - run: 
+          name: "Install depandance"
+          command: npm  install
+      - run:
+          name: "Run test"
+          command: "npm run test"
