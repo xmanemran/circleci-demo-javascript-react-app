@@ -12,18 +12,10 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: "1st run"
-          command: |
-            echo 'export MAX=/max/home' >> $BASH_ENV
-            source $BASH_ENV
-            echo "$BASH_ENV"
-            echo "ENV is $MAX"
-      - run: echo "env is $MAX"
-      - run: node --version
-      - run: npm -v
-      - run: 
-          name: "Install depandance"
-          command: npm install
+          name: "Set variable"
+          command: echo "Hello $NAME"
+          environment: 
+            NAME: "Emran"
       - run:
-          name: "Run test"
-          command: npm run test
+          name: "get variable"
+          command: echo "Hello $NAME"
