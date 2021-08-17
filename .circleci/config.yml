@@ -20,9 +20,10 @@ jobs:
             echo "$BASH_ENV"
             echo "ENV is $PATH"
       - run: echo "env is $PATH"
+      - run: npm -v
       - run: 
           name: "Install depandance"
-          command: npm  install
+          command: npm install
       - run:
           name: "Run test"
-          command: "npm run test"
+          command: npm run test
