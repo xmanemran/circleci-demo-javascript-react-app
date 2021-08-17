@@ -9,13 +9,13 @@ jobs:
   build: 
     docker:
       - image: cimg/node:16.6.2
+    environment: 
+      NAME: "Emran"
     steps:
       - checkout
       - run: 
           name: "Set variable"
           command: echo "Hello $NAME"
-          environment: 
-            NAME: "Emran"
       - run:
           name: "get variable"
           command: echo "Hello $NAME"
