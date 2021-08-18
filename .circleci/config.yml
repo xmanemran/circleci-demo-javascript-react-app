@@ -6,16 +6,22 @@ workflows:
       - build
 
 jobs:
-  build: 
+  build:
     docker:
       - image: cimg/node:16.6.2
-    environment: 
-      NAME: "Emran"
+    environment:
+      NAME: 'Emran'
     steps:
       - checkout
-      - run: 
-          name: "Set variable"
+      - run:
+          name: 'Set variable'
           command: echo "Hello $NAME"
       - run:
-          name: "get variable"
+          name: 'get variable'
           command: echo "Hello $NAME"
+      - run:
+          name: 'Install dependance'
+          command: npm install
+      - run:
+          name: 'Run test'
+          command: 'npm test'
